@@ -1,20 +1,28 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    content: [
+        "./pages/**/*.{ts,tsx}",
+        "./components/**/*.{ts,tsx}",
+        "./app/**/*.{ts,tsx}",
+        "./src/**/*.{ts,tsx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                "grey-hint": "#8B8E98",
+                "primary-color": "#FFCF01",
+                "secondary-color": "#243241",
+                "tertiary-color": "#E87D0E",
+                "background-color": "#242424",
+                "card-background-color": "#303030",
+                "main-text-color": "#37424D",
+            },
+            fontFamily: {
+                montserrat: ["Montserrat"],
+            },
+        },
     },
-  },
-  plugins: [],
-}
-export default config
+    plugins: [],
+};
+export default config;
